@@ -1,8 +1,7 @@
-from utils.functions import saludar
+from utils.functions import *
 
 
 
 nombre = str(input("Ingresa tu nombre: "))
-saludar(nombre)
-print(saludar())
-
+saludo =saludar(nombre)
+print(saludo)
