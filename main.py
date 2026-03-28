@@ -1,17 +1,18 @@
 #Importamos las funciones que estamos utlizando, se encuentran alojadaas dentro de la carpeta source
-from source.functions import (
+from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
-    saludar as s, es_par as ep, celsius_to_farenheit as ctf
+        saludar as s, es_par as ep, celsius_to_farenheit as ctf, farenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr
     )
 from gui.menu import  (
     #Mostramos funcione que enseñan al usario menús 
     show_menu as sm, show_welcome_message as swm, show_conversion_menu as scm
                        )
+#Inicializamos una variable para controlar el flujo del programa mediante ciclo while y una comparación de diferencia
 iniciar = 1
 
-swm()
+swm()#Funcíon que enseña en pantalla un mensaje de bienvenida
 
-while iniciar != 0:
+while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra variable que controla la repetición en bucle de nuestro programa
     
     sm()
     op = input("Seleccione una opción: ")
@@ -29,18 +30,26 @@ while iniciar != 0:
             scm()
             op = input("Digita una opción para continuar: ")
             if op == "1":
-                grados = int(input("Ingresa los grados celsius a convertir: "))
-                ctf(grados)
-                f = ctf(grados)
-                print(f"{grados}°C son {f}°F")    
+                g = int(input("Ingresa los grados celsius a convertir: "))
+                ctf(g)
+                f = ctf(g)
+                print(f"{g}°C son {f}°F")    
             elif op == "2":
-                print("Conversión a Fahrenheit")
+                g = int(input("Ingresa los grados fahrenheit a convertir: "))
+                ftc(g)
+                c = ftc(g)
+                print(f"{g}°F son {c}°C")    
+                
             elif op == "0":
                 print("Saliendo de conversíon")
                 
                 break
             else:
                 print(f"La opción {op} es invalida, itente de nuevo")
+    
+    elif op == "4":
+        print("Calcular area y perimetro de un rectangulo")
+    
     elif op == "0":
         print("Saliendo del programa...")
         iniciar = 0
