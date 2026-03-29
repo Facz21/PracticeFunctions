@@ -1,10 +1,10 @@
-#Importamos las funciones que estamos utlizando, se encuentran alojadaas dentro de la carpeta source
+#Importamos las funciones que estamos utlizando, se encuentran alojadas dentro de la carpeta source
 from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
-        saludar as s, es_par as ep, celsius_to_farenheit as ctf, farenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr
+        saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr
     )
 from gui.menu import  (
-    #Mostramos funcione que enseñan al usario menús 
+    #Mostramos funciones que enseñan al usuario menús 
     show_menu as sm, show_welcome_message as swm, show_conversion_menu as scm, show_area_perimetro_rectangulo as sapr
                        )
 #Inicializamos una variable para controlar el flujo del programa mediante ciclo while y una comparación de diferencia
@@ -31,21 +31,19 @@ while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra vari
             op = input("Digita una opción para continuar: ")
             if op == "1":
                 g = int(input("Ingresa los grados celsius a convertir: "))
-                ctf(g)
                 f = ctf(g)
                 print(f"{g}°C son {f}°F")    
             elif op == "2":
                 g = int(input("Ingresa los grados fahrenheit a convertir: "))
-                ftc(g)
                 c = ftc(g)
                 print(f"{g}°F son {c}°C")    
                 
             elif op == "0":
-                print("Saliendo de conversíon")
+                print("Saliendo de conversión")
                 
                 break
             else:
-                print(f"La opción {op} es invalida, itente de nuevo")
+                print(f"La opción {op} es invalida, intente de nuevo")
     
     elif op == "4":
         while True:
@@ -54,21 +52,19 @@ while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra vari
             if op == "1":
                 b = int(input("Digite la base del rectangulo: "))    
                 h = int(input("Digite la altura del rectangulo: "))
-                ar(b,h)
                 a = ar(b,h)
                 print(f"El area del rectangulo con base {b} y altura {h} es de {a}")    
             elif op == "2":
                 b = int(input("Digite la base del rectangulo: "))    
                 h = int(input("Digite la altura del rectangulo: "))
-                pr(b,h)
                 p = pr(b,h)
                 print(f"El perimetro del rectangulo con base {b} y altura {h} es de {p}")
             elif op == "0":
-                print("Saliendo de conversíon")
+                print("Saliendo de conversión")
                 
                 break
             else:
-                print(f"La opción {op} es invalida, itente de nuevo")
+                print(f"La opción {op} es invalida, intente de nuevo")
             
     
     elif op == "0":

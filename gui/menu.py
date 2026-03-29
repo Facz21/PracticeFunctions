@@ -4,7 +4,7 @@ def show_welcome_message():
 def show_menu():
     print("""
 1.Saludo personalizado
-2.Comprobar numero par
+2.Comprobar número par
 3.Conversión de temperatura
 4.Área y perímetro de un rectangulo
 0.Salir

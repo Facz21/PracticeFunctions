@@ -4,15 +4,15 @@ def saludar(n):
 
 def es_par(n):
     if n % 2 == 0:
-        return f"El numero {n} si es par", True
+        return f"El número {n} si es par"
     else:
-        return f"El numero {n} no es par", False
+        return f"El número {n} no es par"
     
-def celsius_to_farenheit(c):
+def celsius_to_fahrenheit(c):
     f = c * 9/5 + 32
     return f
 
-def farenheit_to_celsius(f):
+def fahrenheit_to_celsius(f):
     c = (f-32) * 5/9 
     return c
 
