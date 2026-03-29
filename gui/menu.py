@@ -6,12 +6,21 @@ def show_menu():
 1.Saludo personalizado
 2.Comprobar numero par
 3.Conversión de temperatura
+4.Área y perímetro de un rectangulo
 0.Salir
           """)
-    
+
 def show_conversion_menu():
     print("""
 1.Convertir a Celsius
 2.Convertir a Fahrenheit
 0.Salir
           """)
+    
+def show_area_perimetro_rectangulo():
+    print("""
+1.Hallar area de un rectangulo
+2.Hallar perimetro de un rectangulo
+0.Salir
+          """)
+    

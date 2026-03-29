@@ -5,7 +5,7 @@ from source.functions import (
     )
 from gui.menu import  (
     #Mostramos funcione que enseñan al usario menús 
-    show_menu as sm, show_welcome_message as swm, show_conversion_menu as scm
+    show_menu as sm, show_welcome_message as swm, show_conversion_menu as scm, show_area_perimetro_rectangulo as sapr
                        )
 #Inicializamos una variable para controlar el flujo del programa mediante ciclo while y una comparación de diferencia
 iniciar = 1
@@ -48,7 +48,28 @@ while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra vari
                 print(f"La opción {op} es invalida, itente de nuevo")
     
     elif op == "4":
-        print("Calcular area y perimetro de un rectangulo")
+        while True:
+            sapr()
+            op = input("Digita una opción para continuar: ")
+            if op == "1":
+                b = int(input("Digite la base del rectangulo: "))    
+                h = int(input("Digite la altura del rectangulo: "))
+                ar(b,h)
+                a = ar(b,h)
+                print(f"El area del rectangulo con base {b} y altura {h} es de {a}")    
+            elif op == "2":
+                b = int(input("Digite la base del rectangulo: "))    
+                h = int(input("Digite la altura del rectangulo: "))
+                pr(b,h)
+                p = pr(b,h)
+                print(f"El perimetro del rectangulo con base {b} y altura {h} es de {p}")
+            elif op == "0":
+                print("Saliendo de conversíon")
+                
+                break
+            else:
+                print(f"La opción {op} es invalida, itente de nuevo")
+            
     
     elif op == "0":
         print("Saliendo del programa...")
