@@ -23,3 +23,6 @@ def area_rectangulo(b,h):
 def perimetro_rectangulo(b,h):
     p = 2 * (b + h)
     return p
+
+def presentar(n,e,c):
+    return f"Mi llamo {n}, tengo {e} años y soy de {c}"

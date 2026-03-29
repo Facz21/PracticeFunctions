@@ -1,7 +1,8 @@
 #Importamos las funciones que estamos utlizando, se encuentran alojadas dentro de la carpeta source
 from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
-        saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr
+        saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr,
+        presentar as prs
     )
 from gui.menu import  (
     #Mostramos funciones que enseñan al usuario menús 
@@ -66,7 +67,13 @@ while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra vari
             else:
                 print(f"La opción {op} es invalida, intente de nuevo")
             
-    
+    elif op == "5":
+        nombre = str(input("Ingresa tu nombre por favor: "))
+        edad = int(input("Ingresa tu edad por favor: "))
+        ciudad = str(input("Ingresa tu ciudad de residencia por favor: "))
+        presentación = prs(nombre, edad, ciudad)
+        print(presentación)
+        
     elif op == "0":
         print("Saliendo del programa...")
         iniciar = 0

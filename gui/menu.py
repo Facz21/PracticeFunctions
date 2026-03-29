@@ -7,6 +7,7 @@ def show_menu():
 2.Comprobar número par
 3.Conversión de temperatura
 4.Área y perímetro de un rectangulo
+5.Presentación personal
 0.Salir
           """)
 
