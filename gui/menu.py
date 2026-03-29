@@ -8,6 +8,7 @@ def show_menu():
 3.Conversión de temperatura
 4.Área y perímetro de un rectangulo
 5.Presentación personal
+6.Minutos a horas y minutos
 0.Salir
           """)
 

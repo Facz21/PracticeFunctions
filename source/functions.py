@@ -26,3 +26,11 @@ def perimetro_rectangulo(b,h):
 
 def presentar(n,e,c):
     return f"Mi llamo {n}, tengo {e} años y soy de {c}"
+
+def min_to_hours(minutos):
+    horas = minutos//60
+    minutos_restantes = minutos%60
+    
+    h = "hora" if horas == 1 else "horas"
+    m = "minuto" if minutos_restantes == 1 else "minutos"
+    return f"{horas} {h} y {minutos_restantes} {m}"
