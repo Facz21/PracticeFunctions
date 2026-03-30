@@ -2,7 +2,7 @@
 from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
         saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr,
-        presentar as prs, min_to_hours as mth,
+        presentar as prs, min_to_hours as mth, aplicar_descuento as ap
     )
 from gui.menu import  (
     #Mostramos funciones que enseñan al usuario menús 
@@ -75,6 +75,15 @@ while iniciar != 0:#Aquí ralizamos validación de diferencia entre nuestra vari
         minutos = int(input("Ingrese la cantidad de minutos: "))        
         formato=mth(minutos)
         print(formato)
+    elif op == "7":
+        precio = float(input("Ingrese el precio del producto: "))
+        descuento = float(input("Ingrese el descuento del a realizar: "))
+        total = ap(precio, descuento)
+        print(f"""
+El precio antes del descuento es de: ${precio}
+Con un descuento del {descuento}% queda en: ${total[0]}
+El total ahorrado fue: ${total[1]}             
+              """)
     elif op == "0":
         print("Saliendo del programa...")
         iniciar = 0

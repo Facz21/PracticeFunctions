@@ -9,6 +9,7 @@ def show_menu():
 4.Área y perímetro de un rectangulo
 5.Presentación personal
 6.Minutos a horas y minutos
+7.Aplicar descuento
 0.Salir
           """)
 

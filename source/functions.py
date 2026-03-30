@@ -34,3 +34,8 @@ def min_to_hours(minutos):
     h = "hora" if horas == 1 else "horas"
     m = "minuto" if minutos_restantes == 1 else "minutos"
     return f"{horas} {h} y {minutos_restantes} {m}"
+
+def aplicar_descuento (precio, descuento):
+    total = precio - (precio * descuento / 100)
+    descontado = precio * descuento / 100
+    return total, descontado
