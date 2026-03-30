@@ -39,3 +39,18 @@ def aplicar_descuento (precio, descuento):
     total = precio - (precio * descuento / 100)
     descontado = precio * descuento / 100
     return total, descontado
+
+def validar_edad_votación (edad):
+    
+    if edad < 1:
+        return"Edad invalida"
+    elif edad < 18:
+        return"Aun no puedes votar"
+    else:
+        return"Tu edad es valida para participar en votaciones"
+
+def año_bisiesto(año):
+    if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+        return True
+    else:
+        return False

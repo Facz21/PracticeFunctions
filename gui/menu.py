@@ -10,6 +10,8 @@ def show_menu():
 5.Presentación personal
 6.Minutos a horas y minutos
 7.Aplicar descuento
+8.Validación de edad para votar
+9.Comprobar si un año es bisiesto
 0.Salir
           """)
 

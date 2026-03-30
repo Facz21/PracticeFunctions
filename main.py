@@ -2,7 +2,7 @@
 from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
         saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr,
-        presentar as prs, min_to_hours as mth, aplicar_descuento as ap
+        presentar as prs, min_to_hours as mth, aplicar_descuento as ap, validar_edad_votación as vev, año_bisiesto as ab
     )
 from gui.menu import  (
     #Mostramos funciones que enseñan al usuario menús 
@@ -84,6 +84,15 @@ El precio antes del descuento es de: ${precio}
 Con un descuento del {descuento}% queda en: ${total[0]}
 El total ahorrado fue: ${total[1]}             
               """)
+    elif op == "8":
+        edad = int(input("Ingresa tu edad para validar si puedes votar o no: "))
+        print(vev(edad))
+    elif op == "9":
+        año = int(input("Ingrese un año para saber si es bisiesto o no: "))
+        if ab(año):
+            print(f"{año} es un año bisiesto, tiene 366 días")
+        else:
+            print(f"{año} no es un año bisiesto, tiene 365 días")
     elif op == "0":
         print("Saliendo del programa...")
         iniciar = 0
