@@ -2,7 +2,7 @@
 from source.functions import ( 
     #Estas son las funciones que realizan operaciones 
         saludar as s, es_par as ep, celsius_to_fahrenheit as ctf, fahrenheit_to_celsius as ftc, area_rectangulo as ar, perimetro_rectangulo as pr,
-        presentar as prs, min_to_hours as mth, aplicar_descuento as ap, validar_edad_votación as vev, año_bisiesto as ab
+        presentar as prs, min_to_hours as mth, aplicar_descuento as ap, validar_edad_votación as vev, año_bisiesto as ab, calcular_propina as cp
     )
 from gui.menu import  (
     #Mostramos funciones que enseñan al usuario menús 
@@ -93,6 +93,16 @@ El total ahorrado fue: ${total[1]}
             print(f"{año} es un año bisiesto, tiene 366 días")
         else:
             print(f"{año} no es un año bisiesto, tiene 365 días")
+    elif op == "10":
+        valor = float(input("Ingrese el valor de la cuenta para calcular la propina: "))
+        porcentaje = float(input("Ingresa cuanto es el porcentaje de la propina: "))
+        total_pagar, propina = cp(valor, porcentaje)
+        print(f"""
+El total a pagar es de: {total_pagar} 
+La propina del {porcentaje} es de: {propina}
+El total sin propina es de: {valor}               
+              """)
+
     elif op == "0":
         print("Saliendo del programa...")
         iniciar = 0

@@ -12,6 +12,7 @@ def show_menu():
 7.Aplicar descuento
 8.Validación de edad para votar
 9.Comprobar si un año es bisiesto
+10.Calcular propina
 0.Salir
           """)
 

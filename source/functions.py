@@ -54,3 +54,9 @@ def año_bisiesto(año):
         return True
     else:
         return False
+    
+def calcular_propina(total, porcentaje):
+    pago_total = total + (total * porcentaje / 100)
+    propina = total * porcentaje / 100
+    return pago_total, propina 
+    
